@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://s8ko5qlisslh"]
+[gd_scene load_steps=23 format=4 uid="uid://s8ko5qlisslh"]
 
 [ext_resource type="Texture2D" uid="uid://bndw6oidcxm5q" path="res://Assets/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="1_pros2"]
 [ext_resource type="Texture2D" uid="uid://b47y4po1ri5lj" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/side_torch_1.png" id="2_r45vs"]
@@ -476,6 +476,13 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_vqw74"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3v5p2"]
+gradient = SubResource("Gradient_vqw74")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(0, 0)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Base" type="TileMapLayer" parent="."]
@@ -492,7 +499,7 @@ tile_set = SubResource("TileSet_laf6k")
 position = Vector2(24, 56)
 sprite_frames = SubResource("SpriteFrames_44vu1")
 autoplay = "default"
-frame_progress = 0.824832
+frame_progress = 0.813791
 
 [node name="Torch2" type="Sprite2D" parent="Objects"]
 
@@ -500,7 +507,7 @@ frame_progress = 0.824832
 position = Vector2(24, 120)
 sprite_frames = SubResource("SpriteFrames_44vu1")
 autoplay = "default"
-frame_progress = 0.543179
+frame_progress = 0.532184
 
 [node name="Torch3" type="Sprite2D" parent="Objects"]
 
@@ -551,3 +558,32 @@ autoplay = "default"
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(160, 90)
 zoom = Vector2(3, 3)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.969137, 0.969137, 0.969137, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(48, 44)
+scale = Vector2(3.5, 1.375)
+energy = 0.5
+texture = SubResource("GradientTexture2D_3v5p2")
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(272, 44)
+rotation = 3.14148
+scale = Vector2(3.5, 1.375)
+energy = 0.5
+texture = SubResource("GradientTexture2D_3v5p2")
+
+[node name="PointLight2D4" type="PointLight2D" parent="."]
+position = Vector2(264, 134.201)
+rotation = 3.14148
+scale = Vector2(3.5, 1.4312)
+energy = 0.5
+texture = SubResource("GradientTexture2D_3v5p2")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(48, 134)
+scale = Vector2(3.5, 1.4375)
+energy = 0.5
+texture = SubResource("GradientTexture2D_3v5p2")
