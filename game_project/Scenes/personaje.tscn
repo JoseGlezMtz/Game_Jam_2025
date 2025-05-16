@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjg8085u8kjed"]
+
+[ext_resource type="Script" uid="uid://cfovv4p7dx2n5" path="res://Scripts/CharacterMovement.gd" id="1_ksl8w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ltgau"]
+
+[node name="Personaje" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_ksl8w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(490, 232)
+shape = SubResource("CircleShape2D_ltgau")
