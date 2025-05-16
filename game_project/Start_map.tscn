@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://s8ko5qlisslh"]
+[gd_scene load_steps=21 format=4 uid="uid://s8ko5qlisslh"]
 
 [ext_resource type="Texture2D" uid="uid://bndw6oidcxm5q" path="res://Assets/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="1_pros2"]
 [ext_resource type="Texture2D" uid="uid://b47y4po1ri5lj" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/side_torch_1.png" id="2_r45vs"]
@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://cc62rcpdeqhu1" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/torch_2.png" id="7_e7d24"]
 [ext_resource type="Texture2D" uid="uid://d3i6m3thl41fs" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/torch_3.png" id="8_b52e1"]
 [ext_resource type="Texture2D" uid="uid://cyck3pt36wwvi" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/torch_4.png" id="9_jtg0r"]
+[ext_resource type="Texture2D" uid="uid://kgefguq653h3" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_1.png" id="10_vqw74"]
+[ext_resource type="Texture2D" uid="uid://bnhscabdgvs5d" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_2.png" id="11_3v5p2"]
+[ext_resource type="Texture2D" uid="uid://vsjbk6hkqipc" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_3.png" id="12_flgbo"]
+[ext_resource type="Texture2D" uid="uid://hwysbcwxi43p" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_4.png" id="13_b4ntr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_laf6k"]
 texture = ExtResource("1_pros2")
@@ -452,6 +456,26 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_bryi8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_vqw74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3v5p2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_flgbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_b4ntr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Base" type="TileMapLayer" parent="."]
@@ -459,7 +483,7 @@ tile_map_data = PackedByteArray("AAABAAEAAAAGAAAAAAACAAEAAAAGAAAAAAACAAIAAAAGAAA
 tile_set = SubResource("TileSet_xepre")
 
 [node name="Objects" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAARAAEAAAAEAAYAAAAKAAAAAAAHAAMAAAAOAAkAAAACAAgAAAADAAEAAAAEAAgAAAAFAAgAAAAIAAYAAAARAAkAAAAHAAcAAAAJAAAAAAAGAAMAAAA=")
+tile_map_data = PackedByteArray("AAAKAAAAAAAHAAMAAAADAAEAAAAEAAgAAAAFAAgAAAAIAAYAAAARAAkAAAAHAAcAAAAJAAAAAAAGAAMAAAABAAEAAAAJAAQAAAABAAIAAAAJAAUAAAABAAAAAAAEAAYAAAASAAAAAAAFAAYAAAABAAkAAAAIAAYAAAA=")
 tile_set = SubResource("TileSet_laf6k")
 
 [node name="Torch1" type="Sprite2D" parent="Objects"]
@@ -468,7 +492,7 @@ tile_set = SubResource("TileSet_laf6k")
 position = Vector2(24, 56)
 sprite_frames = SubResource("SpriteFrames_44vu1")
 autoplay = "default"
-frame_progress = 0.564817
+frame_progress = 0.824832
 
 [node name="Torch2" type="Sprite2D" parent="Objects"]
 
@@ -476,7 +500,7 @@ frame_progress = 0.564817
 position = Vector2(24, 120)
 sprite_frames = SubResource("SpriteFrames_44vu1")
 autoplay = "default"
-frame_progress = 0.283159
+frame_progress = 0.543179
 
 [node name="Torch3" type="Sprite2D" parent="Objects"]
 
@@ -508,6 +532,20 @@ autoplay = "default"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Objects/Walltorch2"]
 position = Vector2(216, 8)
 sprite_frames = SubResource("SpriteFrames_vqw74")
+autoplay = "default"
+
+[node name="Flag" type="Sprite2D" parent="Objects"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Objects/Flag"]
+position = Vector2(136, 8)
+sprite_frames = SubResource("SpriteFrames_bryi8")
+autoplay = "default"
+
+[node name="Flag2" type="Sprite2D" parent="Objects"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Objects/Flag2"]
+position = Vector2(184, 8)
+sprite_frames = SubResource("SpriteFrames_bryi8")
 autoplay = "default"
 
 [node name="Camera2D" type="Camera2D" parent="."]
