@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjn8p8snlgtn3"]
+
+[ext_resource type="AudioStream" uid="uid://2obqp80rq3bt" path="res://Music/InicioCastilloMaster.wav" id="1_t5f2s"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_t5f2s")
+autoplay = true

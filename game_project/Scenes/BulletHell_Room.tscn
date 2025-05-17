@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://b73qkjyh3f25m"]
+[gd_scene load_steps=30 format=4 uid="uid://b73qkjyh3f25m"]
 
 [ext_resource type="Script" uid="uid://d38d2xh11rfk" path="res://Scenes/bullet_hell_manager.gd" id="1_dwngl"]
 [ext_resource type="Texture2D" uid="uid://bndw6oidcxm5q" path="res://Assets/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="1_vqrxt"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bnhscabdgvs5d" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_2.png" id="12_dq4me"]
 [ext_resource type="Texture2D" uid="uid://vsjbk6hkqipc" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_3.png" id="13_ou0ra"]
 [ext_resource type="Texture2D" uid="uid://hwysbcwxi43p" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_4.png" id="14_h7f3m"]
+[ext_resource type="AudioStream" uid="uid://0ewom23kxhpe" path="res://Music/BulletHellMaster.wav" id="20_dq4me"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3hug0"]
 texture = ExtResource("1_vqrxt")
@@ -745,5 +746,10 @@ rotation = -3.14159
 scale = Vector2(7.49703, 8.26984)
 energy = 0.5
 texture = SubResource("GradientTexture2D_dq4me")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_dq4me")
+volume_db = -15.351
+autoplay = true
 
 [connection signal="timeout" from="Alive_timer" to="BUlletHell_manager" method="_on_alive_timer_timeout"]

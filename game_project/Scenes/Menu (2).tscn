@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://b4kfqhl8fmorr"]
+[gd_scene load_steps=27 format=4 uid="uid://b4kfqhl8fmorr"]
 
 [ext_resource type="PackedScene" uid="uid://ce1otjn374ck7" path="res://Scenes/light_controller.tscn" id="1_ktlje"]
 [ext_resource type="Texture2D" uid="uid://bndw6oidcxm5q" path="res://Assets/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="2_mnkgh"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://hwysbcwxi43p" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_4.png" id="14_56jqo"]
 [ext_resource type="Script" uid="uid://bw2pfh35a1r7w" path="res://Scripts/menu.gd" id="15_hiydy"]
 [ext_resource type="FontFile" uid="uid://bke8huwhauivf" path="res://Assets/Daydream.ttf" id="16_gjddf"]
+[ext_resource type="PackedScene" uid="uid://bjn8p8snlgtn3" path="res://Scenes/StartMusic.tscn" id="17_gjddf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_laf6k"]
 texture = ExtResource("2_mnkgh")
@@ -630,5 +631,7 @@ text = "Jugar"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("16_gjddf")
 text = "Salir"
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("17_gjddf")]
 
 [connection signal="pressed" from="Menu/VBoxContainer2/Button" to="Menu" method="_on_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://dsbb0285ptdch"]
+[gd_scene load_steps=20 format=4 uid="uid://dsbb0285ptdch"]
 
 [ext_resource type="Script" uid="uid://drlssn60jwm0q" path="res://Scripts/plat_manager.gd" id="1_8l0g7"]
 [ext_resource type="Texture2D" uid="uid://bndw6oidcxm5q" path="res://Assets/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="1_leinp"]
@@ -6,8 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://eslo24u4vcvv" path="res://Assets/dungeon_sidescroller-Raou/Tilesetv3.png" id="2_viwdt"]
 [ext_resource type="PackedScene" uid="uid://debmvbpoig3l8" path="res://Scenes/Plat_player.tscn" id="3_3g662"]
 [ext_resource type="PackedScene" uid="uid://cy0am0qh0ynas" path="res://Scenes/KillZone.tscn" id="4_wml8b"]
-[ext_resource type="Script" uid="uid://dbruengf1e7bc" path="res://Scenes/cookie.gd" id="8_by3po"]
+[ext_resource type="Script" path="res://Scenes/cookie.gd" id="8_by3po"]
 [ext_resource type="Texture2D" uid="uid://blvlrundtiauw" path="res://Assets/Adobe Express - file.png" id="8_phs8n"]
+[ext_resource type="PackedScene" uid="uid://bjn8p8snlgtn3" path="res://Scenes/StartMusic.tscn" id="9_by3po"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_phs8n"]
 texture = ExtResource("2_viwdt")
@@ -957,5 +958,7 @@ autoplay = "spin"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cookie/Area2D2"]
 position = Vector2(42, 347)
 shape = SubResource("CircleShape2D_o7eqr")
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("9_by3po")]
 
 [connection signal="body_entered" from="Cookie/Area2D2" to="Cookie" method="_on_area_2d_2_body_entered"]

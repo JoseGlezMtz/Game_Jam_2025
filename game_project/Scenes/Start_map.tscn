@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://s8ko5qlisslh"]
+[gd_scene load_steps=32 format=4 uid="uid://s8ko5qlisslh"]
 
 [ext_resource type="PackedScene" uid="uid://ce1otjn374ck7" path="res://Scenes/light_controller.tscn" id="1_vits7"]
 [ext_resource type="Texture2D" uid="uid://bndw6oidcxm5q" path="res://Assets/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="2_dslj3"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cjg8085u8kjed" path="res://Scenes/personaje.tscn" id="17_8v774"]
 [ext_resource type="Texture2D" uid="uid://c2hj6ah0oxphl" path="res://Assets/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest2/v1/priest2_v1_3.png" id="17_i0205"]
 [ext_resource type="Texture2D" uid="uid://51knsv2tjvge" path="res://Assets/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest2/v1/priest2_v1_4.png" id="18_wnied"]
+[ext_resource type="AudioStream" uid="uid://2obqp80rq3bt" path="res://Music/InicioCastilloMaster.wav" id="21_v66ea"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_laf6k"]
 texture = ExtResource("2_dslj3")
@@ -649,3 +650,7 @@ position = Vector2(80, 84)
 
 [node name="Personaje" parent="." instance=ExtResource("17_8v774")]
 position = Vector2(177, 88)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_v66ea")
+autoplay = true
