@@ -10,5 +10,5 @@
 script = ExtResource("1_ksl8w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(490, 232)
+position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_ltgau")

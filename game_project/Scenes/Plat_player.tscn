@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://debmvbpoig3l8"]
+
+[ext_resource type="Script" uid="uid://42pwdk2qf4hn" path="res://Scripts/Plat_Player_movement.gd" id="1_cndn3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rps5r"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
+collision_mask = 3
+script = ExtResource("1_cndn3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_rps5r")
