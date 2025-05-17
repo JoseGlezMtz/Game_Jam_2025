@@ -2,7 +2,7 @@ extends Node
 
 @export var min_energy: float = 0.3
 @export var max_energy: float = 0.7
-@export var flicker_speed: float = 0.1
+@export var flicker_speed: float = 0.5
 @export var noise_amplitude: float = 0.2
 
 var noise = FastNoiseLite.new()

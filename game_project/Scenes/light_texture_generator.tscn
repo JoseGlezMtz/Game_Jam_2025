@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/create_light_texture.gd" id="1_yjlkm"]
+
+[node name="LightTextureGenerator" type="Node"]
+script = ExtResource("1_yjlkm")
+texture_size = 512
+inner_radius_percent = 0.2
