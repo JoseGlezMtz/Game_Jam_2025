@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 @export var max_health: int = 3
 var health: int
+signal player_died()
 #const JUMP_VELOCITY = -400.0
 
 func _ready():
@@ -16,9 +17,13 @@ func take_damage(amount: int):
 	if health <= 0:
 		die()
 		
+		
 func die():
 	print("El jugador ha muerto")
+	
+	emit_signal("player_died") 
 	queue_free()
+	
 
 func _physics_process(delta: float) -> void:
 	
@@ -39,3 +44,7 @@ func _physics_process(delta: float) -> void:
 			move_toward(velocity.y, 0, SPEED)
 		)
 	move_and_slide()
+
+
+func _on_player_died() -> void:
+	get_tree().reload_current_scene()

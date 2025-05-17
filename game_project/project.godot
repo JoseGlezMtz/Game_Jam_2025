@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Game_Project"
-run/main_scene="res://Scenes/personaje.tscn"
+run/main_scene="uid://b4kfqhl8fmorr"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,7 +23,6 @@ SignalBus="*res://Singleton/signalBus.gd"
 
 window/size/viewport_width=960
 window/size/viewport_height=540
-window/size/mode=3
 window/stretch/mode="viewport"
 
 [global_group]

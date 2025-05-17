@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://debmvbpoig3l8" path="res://Scenes/Plat_player.tscn" id="3_3g662"]
 [ext_resource type="PackedScene" uid="uid://cy0am0qh0ynas" path="res://Scenes/KillZone.tscn" id="4_wml8b"]
 [ext_resource type="Texture2D" uid="uid://bt4l65ryjkwna" path="res://Assets/Anime-Girl-Hatsune-Miku-PNG-Pic.png" id="5_pcsj6"]
-[ext_resource type="Script" uid="uid://dbruengf1e7bc" path="res://Scenes/cookie.gd" id="8_by3po"]
+[ext_resource type="Script" path="res://Scenes/cookie.gd" id="8_by3po"]
 [ext_resource type="Texture2D" uid="uid://blvlrundtiauw" path="res://Assets/Adobe Express - file.png" id="8_phs8n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_phs8n"]

@@ -13,3 +13,5 @@ script = ExtResource("1_xjght")
 
 [node name="hitbox" type="CollisionShape2D" parent="bullet"]
 shape = SubResource("CircleShape2D_xjght")
+
+[connection signal="body_entered" from="bullet" to="." method="_on_bullet_body_entered"]
