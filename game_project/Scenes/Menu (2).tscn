@@ -479,10 +479,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Gradient" id="Gradient_vqw74"]
+[sub_resource type="Gradient" id="Gradient_hiydy"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_3v5p2"]
-gradient = SubResource("Gradient_vqw74")
+gradient = SubResource("Gradient_hiydy")
 fill_from = Vector2(1, 0)
 fill_to = Vector2(0, 0)
 
@@ -588,7 +588,7 @@ energy = 0.5
 texture = SubResource("GradientTexture2D_3v5p2")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(65, 251)
+position = Vector2(44, 134)
 scale = Vector2(3.5, 1.4375)
 energy = 0.5
 texture = SubResource("GradientTexture2D_3v5p2")
@@ -601,9 +601,19 @@ offset_left = 38.0
 offset_top = 34.0
 offset_right = 286.0
 offset_bottom = 75.0
+theme_override_colors/font_color = Color(0.501961, 0, 0.72549, 1)
 theme_override_fonts/font = ExtResource("16_gjddf")
 theme_override_font_sizes/font_size = 30
-text = "Godotita"
+text = "Godorita"
+
+[node name="Label" type="Label" parent="Menu/Label"]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 247.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("16_gjddf")
+theme_override_font_sizes/font_size = 30
+text = "Godorita"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Menu"]
 offset_left = 115.0
