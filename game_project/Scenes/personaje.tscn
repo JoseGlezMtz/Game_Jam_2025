@@ -6,7 +6,7 @@
 
 [node name="Personaje" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Player"]]
 script = ExtResource("1_ksl8w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]

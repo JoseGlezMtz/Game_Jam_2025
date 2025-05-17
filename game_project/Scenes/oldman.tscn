@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdlj4leeeu8m3"]
+
+[ext_resource type="Script" uid="uid://d0n7vdsvcf1wo" path="res://Scenes/oldman.gd" id="1_1yva7"]
+[ext_resource type="PackedScene" uid="uid://c4x0bsa1woevh" path="res://Dialogues/dialogue.tscn" id="2_em6q0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1yva7"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkwgo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1yva7"]
+radius = 9.5
+
+[node name="Oldman" type="CharacterBody2D"]
+script = ExtResource("1_1yva7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1yva7")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_fkwgo")
+
+[node name="chat_detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_1yva7")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Dialogue" parent="." instance=ExtResource("2_em6q0")]
+
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="dialogue_finished" from="Dialogue" to="." method="_on_dialogue_dialogue_finished"]
