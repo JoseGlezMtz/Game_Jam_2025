@@ -5,9 +5,9 @@ extends Node
 
 
 func win_sequence():
-	win.visible=true
+	get_tree().change_scene_to_file("res://win.tscn")
 
 
 func _on_alive_timer_timeout() -> void:
-	Engine.time_scale=0.5
+	
 	win_sequence()

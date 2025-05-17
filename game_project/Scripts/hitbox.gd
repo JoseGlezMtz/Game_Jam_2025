@@ -14,6 +14,6 @@ func _physics_process(delta: float) -> void:
 	
 
 func _on_bullet_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player") and not body.is_in_group("invulnerable_players"):
 		body.take_damage(1)
 		queue_free()

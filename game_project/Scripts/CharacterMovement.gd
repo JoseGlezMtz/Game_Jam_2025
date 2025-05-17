@@ -2,9 +2,12 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
-const SPEED = 300.0
-@export var max_health: int = 3
+const SPEED = 200.0
+@export var max_health: int = 6
 var health: int
+var invulnerable: bool = false
+var invulnerability_duration: float = 2.0
+var blink_time: float = 0.1
 signal player_died()
 
 var Player_State : String
@@ -15,9 +18,13 @@ func _ready():
 	health = max_health
 	
 func take_damage(amount: int):
+	if invulnerable:
+		return
 	health -= amount
 	if health <= 0:
 		die()
+	else:
+		activate_invulnerability()
 		
 		
 func die():
@@ -26,6 +33,25 @@ func die():
 	emit_signal("player_died") 
 	queue_free()
 	
+func activate_invulnerability():
+	invulnerable = true
+	animated_sprite_2d.modulate.a = 0.5
+	add_to_group("invulnerable_players")
+	
+	await get_tree().create_timer(invulnerability_duration).timeout
+	
+	invulnerable = false
+	animated_sprite_2d.modulate.a = 1.0
+	remove_from_group("invulnerable_players")
+	
+func _process(delta):
+	if invulnerable:
+		if int(Time.get_ticks_msec() / (blink_time * 1000)) % 2 == 0:
+			animated_sprite_2d.visible = false
+		else:
+			animated_sprite_2d.visible = true
+	else:
+		animated_sprite_2d.visible = true
 
 func _physics_process(delta: float) -> void:
 	
