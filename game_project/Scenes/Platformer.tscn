@@ -187,6 +187,12 @@ position = Vector2(919, 284)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(0, 2)
+zoom = Vector2(1.5, 1.5)
+limit_left = 0
+limit_top = 0
+limit_right = 960
+limit_bottom = 540
+limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Area2D" parent="." instance=ExtResource("4_wml8b")]
