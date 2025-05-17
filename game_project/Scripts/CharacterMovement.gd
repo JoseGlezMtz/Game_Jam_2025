@@ -2,8 +2,23 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
+@export var max_health: int = 3
+var health: int
 #const JUMP_VELOCITY = -400.0
 
+func _ready():
+	health = max_health
+	
+func take_damage(amount: int):
+	health -= amount
+	print("Vida restante: ", health)
+	
+	if health <= 0:
+		die()
+		
+func die():
+	print("El jugador ha muerto")
+	queue_free()
 
 func _physics_process(delta: float) -> void:
 	

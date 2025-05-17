@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://b73qkjyh3f25m"]
+[gd_scene load_steps=6 format=4 uid="uid://b73qkjyh3f25m"]
 
 [ext_resource type="Texture2D" uid="uid://bndw6oidcxm5q" path="res://Assets/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="1_vqrxt"]
 [ext_resource type="PackedScene" uid="uid://dcwv2u1pn2d1n" path="res://Scenes/enemy.tscn" id="2_sncxp"]
+[ext_resource type="PackedScene" uid="uid://cjg8085u8kjed" path="res://Scenes/personaje.tscn" id="3_hcihp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3hug0"]
 texture = ExtResource("1_vqrxt")
@@ -326,3 +327,6 @@ position = Vector2(482, 270)
 
 [node name="enemy" parent="." instance=ExtResource("2_sncxp")]
 position = Vector2(482, 270)
+
+[node name="Personaje" parent="." instance=ExtResource("3_hcihp")]
+position = Vector2(480, 460)
