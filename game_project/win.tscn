@@ -1,14 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://foovrwosns2q"]
+[gd_scene load_steps=28 format=3 uid="uid://foovrwosns2q"]
 
 [ext_resource type="Script" uid="uid://b5yxrjcbq82ni" path="res://win.gd" id="1_wao2c"]
 [ext_resource type="Texture2D" uid="uid://bndw6oidcxm5q" path="res://Assets/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="2_yblwc"]
 [ext_resource type="Texture2D" uid="uid://eslo24u4vcvv" path="res://Assets/dungeon_sidescroller-Raou/Tilesetv3.png" id="3_u4bre"]
 [ext_resource type="FontFile" uid="uid://bke8huwhauivf" path="res://Assets/Daydream.ttf" id="4_4x0fk"]
-[ext_resource type="Script" uid="uid://byeesyx0bccp1" path="res://ligth_torch.gd" id="5_d8ejm"]
+[ext_resource type="Script" path="res://ligth_torch.gd" id="5_d8ejm"]
 [ext_resource type="Texture2D" uid="uid://teyi7ky84nbx" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/torch_1.png" id="5_uxvcs"]
 [ext_resource type="Texture2D" uid="uid://cc62rcpdeqhu1" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/torch_2.png" id="6_d8ejm"]
 [ext_resource type="Texture2D" uid="uid://d3i6m3thl41fs" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/torch_3.png" id="7_am31m"]
 [ext_resource type="Texture2D" uid="uid://cyck3pt36wwvi" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/torch_4.png" id="8_po0ld"]
+[ext_resource type="Texture2D" uid="uid://d2ritda8rc40d" path="res://Assets/Cute_Fantasy_Free/Player/Player.png" id="10_po0ld"]
+[ext_resource type="Texture2D" uid="uid://u1hwdohmq37n" path="res://Assets/spritesheet.png" id="11_wmsxl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8e1nn"]
 texture = ExtResource("2_yblwc")
@@ -840,6 +842,78 @@ fill = 1
 fill_from = Vector2(0.5, 0.518349)
 fill_to = Vector2(0.990826, 0.321101)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbxid"]
+atlas = ExtResource("10_po0ld")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cenvs"]
+atlas = ExtResource("10_po0ld")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oewu"]
+atlas = ExtResource("10_po0ld")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toolk"]
+atlas = ExtResource("10_po0ld")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wvmo"]
+atlas = ExtResource("10_po0ld")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7278n"]
+atlas = ExtResource("10_po0ld")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dmhp5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbxid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cenvs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4oewu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_toolk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wvmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7278n")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xgxw"]
+atlas = ExtResource("11_wmsxl")
+region = Rect2(0, 0, 1026, 1026)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qynjx"]
+atlas = ExtResource("11_wmsxl")
+region = Rect2(1026, 0, 1026, 1026)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_06sxk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xgxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qynjx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
 [node name="Win" type="Node2D"]
 script = ExtResource("1_wao2c")
 
@@ -945,5 +1019,21 @@ scale = Vector2(2.76563, 1.82812)
 energy = 0.5
 texture = SubResource("GradientTexture2D_d8ejm")
 script = ExtResource("5_d8ejm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(332, 354)
+scale = Vector2(7.17188, 6.05823)
+sprite_frames = SubResource("SpriteFrames_dmhp5")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.300044
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(669, 361)
+scale = Vector2(0.101486, 0.105809)
+sprite_frames = SubResource("SpriteFrames_06sxk")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.083391
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
