@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bndw6oidcxm5q" path="res://Assets/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="2_yblwc"]
 [ext_resource type="Texture2D" uid="uid://eslo24u4vcvv" path="res://Assets/dungeon_sidescroller-Raou/Tilesetv3.png" id="3_u4bre"]
 [ext_resource type="FontFile" uid="uid://bke8huwhauivf" path="res://Assets/Daydream.ttf" id="4_4x0fk"]
-[ext_resource type="Script" path="res://ligth_torch.gd" id="5_d8ejm"]
+[ext_resource type="Script" uid="uid://byeesyx0bccp1" path="res://ligth_torch.gd" id="5_d8ejm"]
 [ext_resource type="Texture2D" uid="uid://teyi7ky84nbx" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/torch_1.png" id="5_uxvcs"]
 [ext_resource type="Texture2D" uid="uid://cc62rcpdeqhu1" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/torch_2.png" id="6_d8ejm"]
 [ext_resource type="Texture2D" uid="uid://d3i6m3thl41fs" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/torch_3.png" id="7_am31m"]
