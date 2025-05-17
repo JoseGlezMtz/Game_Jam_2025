@@ -1,19 +1,21 @@
 extends CharacterBody2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
 const SPEED = 300.0
 @export var max_health: int = 3
 var health: int
 signal player_died()
-#const JUMP_VELOCITY = -400.0
+
+var Player_State : String
+var Player_Direction : String
+
 
 func _ready():
 	health = max_health
 	
 func take_damage(amount: int):
 	health -= amount
-	print("Vida restante: ", health)
-	
 	if health <= 0:
 		die()
 		
@@ -43,8 +45,32 @@ func _physics_process(delta: float) -> void:
 			move_toward(velocity.x, 0, SPEED),
 			move_toward(velocity.y, 0, SPEED)
 		)
+		
+	if direction.x==0 and direction.y==0:
+		Player_State="Idle"
+	else:
+		Player_State="Walk"
+	
+	if direction.x:
+		
+		Player_Direction="Side"
+		if direction.x>0:
+			animated_sprite_2d.flip_h=false
+		elif direction.x<0:
+			animated_sprite_2d.flip_h=true
+		
+	if direction.y:
+		if direction.y>0:
+			Player_Direction="Front"
+		elif direction.y<0:
+			Player_Direction="Back"
+	
 	move_and_slide()
+	Play_Animation(Player_Direction,Player_State)
+	
 
-
+func Play_Animation(dir,stt):
+	animated_sprite_2d.play(dir+stt)
+	
 func _on_player_died() -> void:
 	get_tree().reload_current_scene()

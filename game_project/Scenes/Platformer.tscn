@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://dsbb0285ptdch"]
+[gd_scene load_steps=19 format=4 uid="uid://dsbb0285ptdch"]
 
 [ext_resource type="Script" uid="uid://drlssn60jwm0q" path="res://Scripts/plat_manager.gd" id="1_8l0g7"]
 [ext_resource type="Texture2D" uid="uid://bndw6oidcxm5q" path="res://Assets/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="1_leinp"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://eslo24u4vcvv" path="res://Assets/dungeon_sidescroller-Raou/Tilesetv3.png" id="2_viwdt"]
 [ext_resource type="PackedScene" uid="uid://debmvbpoig3l8" path="res://Scenes/Plat_player.tscn" id="3_3g662"]
 [ext_resource type="PackedScene" uid="uid://cy0am0qh0ynas" path="res://Scenes/KillZone.tscn" id="4_wml8b"]
-[ext_resource type="Texture2D" uid="uid://bt4l65ryjkwna" path="res://Assets/Anime-Girl-Hatsune-Miku-PNG-Pic.png" id="5_pcsj6"]
 [ext_resource type="Script" path="res://Scenes/cookie.gd" id="8_by3po"]
 [ext_resource type="Texture2D" uid="uid://blvlrundtiauw" path="res://Assets/Adobe Express - file.png" id="8_phs8n"]
 
@@ -935,11 +934,6 @@ limit_right = 960
 limit_bottom = 540
 limit_smoothed = true
 position_smoothing_enabled = true
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(-1.99999, 4)
-scale = Vector2(0.0296296, 0.0258)
-texture = ExtResource("5_pcsj6")
 
 [node name="Area2D" parent="." instance=ExtResource("4_wml8b")]
 position = Vector2(484, 506)

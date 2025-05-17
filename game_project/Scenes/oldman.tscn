@@ -7,11 +7,6 @@
 animations = [{
 "frames": [],
 "loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
 "name": &"new_animation",
 "speed": 5.0
 }]
@@ -26,7 +21,7 @@ script = ExtResource("1_1yva7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1yva7")
-animation = &"idle"
+animation = &"new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.7, 0.7)

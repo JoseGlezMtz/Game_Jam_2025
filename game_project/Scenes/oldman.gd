@@ -82,3 +82,4 @@ func _on_timer_timeout():
 func _on_dialogue_dialogue_finished():
 	is_chatting = false
 	is_roaming = true
+	get_tree().change_scene_to_file("res://Scenes/Platformer.tscn")
