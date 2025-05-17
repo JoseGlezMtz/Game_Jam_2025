@@ -37,7 +37,8 @@ script = ExtResource("1_xjght")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6afsh")
-frame_progress = 0.804773
+autoplay = "default"
+frame_progress = 0.626742
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
