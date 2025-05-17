@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4x0bsa1woevh"]
+
+[ext_resource type="Texture2D" uid="uid://bhu8ac8bp7310" path="res://Assets/2D Pixel Dungeon Asset Pack/interface/square_up_down_4.png" id="1_exp8r"]
+[ext_resource type="Script" uid="uid://ctt0whvsltvht" path="res://Dialogues/dialogue.gd" id="1_f1821"]
+
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_f1821")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -35.0
+offset_top = -74.0
+offset_right = 39.0
+offset_bottom = -16.0
+texture = ExtResource("1_exp8r")
+metadata/_edit_group_ = true
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 125.0
+offset_bottom = 29.0
+scale = Vector2(0.5, 0.5)
+text = "Name:"
+
+[node name="Text" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 13.0
+offset_right = 165.0
+offset_bottom = 120.0
+scale = Vector2(0.4, 0.4)
+text = "Chatting tatata"
