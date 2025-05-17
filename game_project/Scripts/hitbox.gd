@@ -1,7 +1,8 @@
-extends Area2D
+extends Node2D
 
-var velocity: Vector2 = Vector2()
+var speed: float = 200
 const duration: float = 20.0
+const direction:Vector2 = Vector2.RIGHT
 
 func _ready() -> void:
 	connect("body_entered", _on_body_entered)
@@ -9,7 +10,7 @@ func _ready() -> void:
 	queue_free()
 	
 func _physics_process(delta: float) -> void:
-	position += velocity * delta
+	position += direction *speed * delta
 	
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("players"):

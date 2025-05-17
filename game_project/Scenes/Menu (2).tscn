@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bnhscabdgvs5d" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_2.png" id="12_ofows"]
 [ext_resource type="Texture2D" uid="uid://vsjbk6hkqipc" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_3.png" id="13_tdulj"]
 [ext_resource type="Texture2D" uid="uid://hwysbcwxi43p" path="res://Assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_4.png" id="14_56jqo"]
-[ext_resource type="Script" uid="uid://bw2pfh35a1r7w" path="res://Scenes/menu.gd" id="15_hiydy"]
+[ext_resource type="Script" uid="uid://bw2pfh35a1r7w" path="res://Scripts/menu.gd" id="15_hiydy"]
 [ext_resource type="FontFile" uid="uid://bke8huwhauivf" path="res://Assets/Daydream.ttf" id="16_gjddf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_laf6k"]
