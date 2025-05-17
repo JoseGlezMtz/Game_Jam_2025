@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://b73qkjyh3f25m"]
+[gd_scene load_steps=29 format=4 uid="uid://b73qkjyh3f25m"]
 
 [ext_resource type="Script" uid="uid://d38d2xh11rfk" path="res://Scenes/bullet_hell_manager.gd" id="1_dwngl"]
 [ext_resource type="Texture2D" uid="uid://bndw6oidcxm5q" path="res://Assets/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="1_vqrxt"]
@@ -498,6 +498,13 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_p1cgn"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dq4me"]
+gradient = SubResource("Gradient_p1cgn")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(0, 0)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="BUlletHell_manager" type="Node" parent="."]
@@ -517,8 +524,6 @@ tile_set = SubResource("TileSet_wd0sb")
 position = Vector2(24, 56)
 sprite_frames = SubResource("SpriteFrames_tpg1a")
 autoplay = "default"
-
-[node name="PointLight2D" type="PointLight2D" parent="Objects/SideTorchL/AnimatedSprite2D"]
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Objects/SideTorchL"]
 position = Vector2(24, 120)
@@ -710,5 +715,35 @@ offset_top = 16.0
 offset_right = 67.0
 offset_bottom = 39.0
 script = ExtResource("7_k3jsq")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.687215, 0.687215, 0.687215, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(244, 264)
+scale = Vector2(7.375, 8.25)
+energy = 0.5
+texture = SubResource("GradientTexture2D_dq4me")
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(482.4, 130.419)
+rotation = 1.5708
+scale = Vector2(3.9506, 14.575)
+energy = 0.5
+texture = SubResource("GradientTexture2D_dq4me")
+
+[node name="PointLight2D4" type="PointLight2D" parent="."]
+position = Vector2(480, 400)
+rotation = 4.71239
+scale = Vector2(3.9506, 14.575)
+energy = 0.5
+texture = SubResource("GradientTexture2D_dq4me")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(719.328, 263.238)
+rotation = -3.14159
+scale = Vector2(7.49703, 8.26984)
+energy = 0.5
+texture = SubResource("GradientTexture2D_dq4me")
 
 [connection signal="timeout" from="Alive_timer" to="BUlletHell_manager" method="_on_alive_timer_timeout"]
