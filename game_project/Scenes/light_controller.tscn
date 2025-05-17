@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/light_controller.gd" id="1_yjlkm"]
+
+[node name="LightController" type="Node"]
+script = ExtResource("1_yjlkm")
+min_energy = 0.4
+max_energy = 0.8
+flicker_speed = 0.5
+noise_amplitude = 0.15
