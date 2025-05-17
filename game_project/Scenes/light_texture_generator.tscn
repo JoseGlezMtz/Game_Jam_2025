@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://ycusmiqyvr8w"]
 
-[ext_resource type="Script" path="res://Scripts/create_light_texture.gd" id="1_yjlkm"]
+[ext_resource type="Script" uid="uid://ck3a6650iifst" path="res://Scripts/create_light_texture.gd" id="1_yjlkm"]
 
 [node name="LightTextureGenerator" type="Node"]
 script = ExtResource("1_yjlkm")
